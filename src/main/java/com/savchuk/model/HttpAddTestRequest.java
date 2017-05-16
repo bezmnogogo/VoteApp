@@ -15,4 +15,28 @@ public class HttpAddTestRequest {
 
     @JsonProperty
     Question[] testQuestions;
+
+    public TestOptions getTestOptions() {
+        return testOptions;
+    }
+
+    public void setTestOptions(TestOptions testOptions) {
+        this.testOptions = testOptions;
+    }
+
+    public String[] getTestPeople() {
+        return testPeople;
+    }
+
+    public void setTestPeople(String[] testPeople) {
+        this.testPeople = testPeople;
+    }
+
+    public Question[] getTestQuestions() {
+        return testQuestions;
+    }
+
+    public void setTestQuestions(Question[] testQuestions) {
+        this.testQuestions = testQuestions;
+    }
 }

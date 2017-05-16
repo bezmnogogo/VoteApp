@@ -40,6 +40,14 @@ public class Test extends GenericEntity {
     @Column(name = "createTime", nullable = false)
     private Date createTime;
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
     public int getTimeLimit() {
         return timeLimit;
     }
