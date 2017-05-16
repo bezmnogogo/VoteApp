@@ -1,7 +1,7 @@
 package com.savchuk.services.Test;
 
-import com.savchuk.dao.entitties.Test;
-import com.savchuk.dao.repository.ITestRepository;
+import com.savchuk.dao.entitties.Test.Test;
+import com.savchuk.dao.repository.Test.ITestRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

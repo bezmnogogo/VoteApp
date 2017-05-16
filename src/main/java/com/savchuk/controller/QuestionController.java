@@ -1,6 +1,10 @@
 package com.savchuk.controller;
 
 import com.savchuk.dao.entitties.*;
+import com.savchuk.dao.entitties.Question.Question;
+import com.savchuk.dao.entitties.Question.QuestionCategory;
+import com.savchuk.dao.entitties.Question.QuestionOption;
+import com.savchuk.dao.entitties.Question.QuestionType;
 import com.savchuk.model.*;
 import com.savchuk.services.IUserService;
 import com.savchuk.services.ParseService;
@@ -16,7 +20,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
-import java.util.Set;
 
 /**
  * Created by home on 13.05.17.
@@ -133,7 +136,7 @@ public class QuestionController {
             savedOption = questionOptionService.saveQuestionOption(option);
         }
 
-        return new HttpAddQuestionResponse(savedQuestion.getId());
+        return new HttpAddQuestionResponse(savedQuestion);
     }
 
     @RequestMapping(value = "/getQuestionsByCategory/{categoryId}", method = RequestMethod.GET)

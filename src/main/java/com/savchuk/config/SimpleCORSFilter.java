@@ -29,6 +29,7 @@ public class SimpleCORSFilter implements Filter {
 
     private final Logger log = LoggerFactory.getLogger(SimpleCORSFilter.class);
 
+
     public SimpleCORSFilter() {
         log.info("SimpleCORSFilter init");
     }
@@ -43,7 +44,7 @@ public class SimpleCORSFilter implements Filter {
         response.setHeader("Access-Control-Allow-Credentials", "true");
         response.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
         response.setHeader("Access-Control-Max-Age", "3600");
-        response.setHeader("Access-Control-Allow-Headers", "Content-Type, Accept, X-Requested-With, remember-me, X-Authentication-token, Access-Control-Request-Headers");
+        response.setHeader("Access-Control-Allow-Headers", "Content-Type, Accept, remember-me, X-Authentication-token, Access-Control-Request-Headers");
 
         if(request.getHeader("X-Authentication-token") != null){
             User user = userService.findUserById(Long.valueOf(CryptoService.decryptAes(request.getHeader("X-Authentication-token"))));

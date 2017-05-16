@@ -28,6 +28,8 @@
     </parent>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <asu-pvh-plasttrade.version>1.0.5.RELEASE</asu-pvh-plasttrade.version>
         <spring.version>4.1.5.RELEASE</spring.version>
         <spring.security.version>4.0.1.RELEASE</spring.security.version>

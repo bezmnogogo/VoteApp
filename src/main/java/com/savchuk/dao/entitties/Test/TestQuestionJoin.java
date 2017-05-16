@@ -1,14 +1,18 @@
-package com.savchuk.dao.entitties;
+package com.savchuk.dao.entitties.Test;
+
+import com.savchuk.dao.entitties.GenericEntity;
+import com.savchuk.dao.entitties.Question.Question;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import javax.persistence.*;
-import java.util.List;
 
 /**
  * Created by home on 15.05.17.
  */
 @Entity
 @Table(name = "test_question_join")
-public class TestQuestionJoin extends GenericEntity{
+@EnableJpaRepositories
+public class TestQuestionJoin extends GenericEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "question_id", nullable = false)

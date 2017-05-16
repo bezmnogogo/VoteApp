@@ -1,8 +1,5 @@
 //package com.savchuk.config;
 //
-//import org.flywaydb.core.Flyway;
-//import org.flywaydb.core.api.MigrationInfoService;
-//import org.flywaydb.core.api.MigrationVersion;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.context.annotation.Bean;
 //import org.springframework.context.annotation.Configuration;
@@ -41,19 +38,6 @@
 //    private Environment env;
 //
 //    @Bean
-//    @DependsOn(value = {"flyway"})
-//    public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
-//        LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
-//        em.setDataSource(dataSource());
-//        em.setPackagesToScan("com.savchuk.dao.entities");
-//        JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
-//        em.setJpaVendorAdapter(vendorAdapter);
-//        em.setJpaProperties(hibernateProperties());
-//
-//        return em;
-//    }
-//
-//    @Bean
 //    public DataSource dataSource() {
 //        DriverManagerDataSource dataSource = new DriverManagerDataSource();
 //        dataSource.setDriverClassName(env.getProperty("spring.datasource.driver-class-name"));
@@ -76,23 +60,6 @@
 //        return new PersistenceExceptionTranslationPostProcessor();
 //    }
 //
-//    @Bean(initMethod = "migrate")
-//    public Flyway flyway() {
-//        final Flyway flyway = new Flyway();
-//        flyway.setDataSource(this.dataSource());
-//
-//        MigrationInfoService info = flyway.info();
-//
-//        //flyway.setInitOnMigrate(true);
-//        if (env.getProperty("flyway.locations") == null)
-//            return null;
-//        flyway.setLocations(env.getProperty("flyway.locations").split(","));
-//        flyway.setBaselineVersion(MigrationVersion.fromVersion(new String("1")));
-//        //flyway.setLocations("db/migration/db.migration.mysql");
-//        flyway.repair();
-//        return flyway;
-//    }
-//
 //    @SuppressWarnings("serial")
 //    Properties hibernateProperties() {
 //        return new Properties() {
@@ -108,10 +75,5 @@
 //                setProperty("hibernate.connection.useUnicode", "true");
 //            }
 //        };
-//    }
-//
-//    @Override
-//    public PlatformTransactionManager annotationDrivenTransactionManager() {
-//        return transactionManager(entityManagerFactory().getNativeEntityManagerFactory());
 //    }
 //}

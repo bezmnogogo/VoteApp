@@ -1,23 +1,24 @@
 package com.savchuk.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.savchuk.dao.entitties.Question.Question;
 
 /**
  * Created by home on 15.05.17.
  */
 public class HttpAddQuestionResponse extends HttpResponse {
     @JsonProperty
-    long id;
+    Question question;
 
-    public HttpAddQuestionResponse(long id) {
-        this.id = id;
+    public HttpAddQuestionResponse(Question question) {
+        this.question = question;
     }
 
-    public long getId() {
-        return id;
+    public Question getQuestion() {
+        return question;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setQuestion(Question question) {
+        this.question = question;
     }
 }

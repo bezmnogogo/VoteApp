@@ -79,4 +79,6 @@ public interface IUserService {
     User findUserByEmailAndPassword(String email, String password);
 
     User findUserById(long userId);
+
+    User findUserByEmail(String email);
 }

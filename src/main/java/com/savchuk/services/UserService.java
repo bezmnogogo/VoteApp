@@ -117,5 +117,10 @@ public class UserService implements IUserService {
     public User findUserById(long userId) {
         return userRepository.findOne(userId);
     }
+
+    @Override
+    public User findUserByEmail(String email) {
+        return userRepository.findUserByEmail(email);
+    }
 }
 

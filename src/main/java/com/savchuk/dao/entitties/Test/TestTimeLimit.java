@@ -1,5 +1,6 @@
-package com.savchuk.dao.entitties;
+package com.savchuk.dao.entitties.Test;
 
+import com.savchuk.dao.entitties.GenericEntity;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import javax.persistence.Entity;

@@ -1,7 +1,7 @@
 package com.savchuk.services.Questions;
 
-import com.savchuk.dao.entitties.QuestionOption;
-import com.savchuk.dao.repository.IQuestionOptionRepository;
+import com.savchuk.dao.entitties.Question.QuestionOption;
+import com.savchuk.dao.repository.Question.IQuestionOptionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

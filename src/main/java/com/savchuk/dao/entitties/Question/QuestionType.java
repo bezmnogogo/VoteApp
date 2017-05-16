@@ -1,14 +1,13 @@
-package com.savchuk.dao.entitties;
+package com.savchuk.dao.entitties.Question;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.codehaus.jackson.annotate.JsonIgnore;
+import com.savchuk.dao.entitties.GenericEntity;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import javax.persistence.*;
 import java.util.List;
-import java.util.Set;
 
 /**
  * Created by home on 17.04.17.

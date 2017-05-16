@@ -1,11 +1,12 @@
-package com.savchuk.dao.entitties;
+package com.savchuk.dao.entitties.Question;
 
 import com.fasterxml.jackson.annotation.*;
+import com.savchuk.dao.entitties.GenericEntity;
+import com.savchuk.dao.entitties.User;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import javax.persistence.*;
 import java.util.List;
-import java.util.Set;
 
 /**
  * Created by home on 17.04.17.

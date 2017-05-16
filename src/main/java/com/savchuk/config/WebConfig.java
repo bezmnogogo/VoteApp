@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
+import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.config.annotation.*;
 
 import javax.servlet.Filter;
@@ -45,17 +46,15 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 //        return registration;
 //    }
 
-//    @Bean
-//    public FilterRegistrationBean headerFilterRegistration() {
-//
-//        FilterRegistrationBean registration = new FilterRegistrationBean();
-//        registration.setFilter(headerFilter());
-//        registration.addUrlPatterns("/*");
-//        registration.addInitParameter("paramName", "paramValue");
-//        registration.setName("SimpleCORSFilter");
-//        registration.setOrder(1);
-//        return registration;
-//    }
+    @Bean
+    public FilterRegistrationBean headerFilterRegistration() {
+        FilterRegistrationBean registrationBean = new FilterRegistrationBean();
+        CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
+        characterEncodingFilter.setForceEncoding(true);
+        characterEncodingFilter.setEncoding("UTF-8");
+        registrationBean.setFilter(characterEncodingFilter);
+        return registrationBean;
+    }
 //
 //    @Bean(name = "headerFilter")
 //    public Filter headerFilter(){

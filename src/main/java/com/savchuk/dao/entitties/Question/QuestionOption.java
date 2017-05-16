@@ -1,8 +1,9 @@
-package com.savchuk.dao.entitties;
+package com.savchuk.dao.entitties.Question;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.savchuk.dao.entitties.GenericEntity;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import javax.persistence.*;

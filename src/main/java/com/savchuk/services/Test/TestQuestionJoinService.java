@@ -1,7 +1,7 @@
 package com.savchuk.services.Test;
 
-import com.savchuk.dao.entitties.TestQuestionJoin;
-import com.savchuk.dao.repository.ITestQuestionJoinRepository;
+import com.savchuk.dao.entitties.Test.TestQuestionJoin;
+import com.savchuk.dao.repository.Test.ITestQuestionJoinRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

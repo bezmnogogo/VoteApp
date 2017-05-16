@@ -26,4 +26,7 @@ public interface IUserRepository extends JpaRepository<User, Long> {
 
     @Query("select DISTINCT u from User u where u.email = :email and u.password = :password")
     User findUserByEmailAndPassword(@Param("email") String email, @Param("password") String passwrod);
+
+    @Query("select DISTINCT u from User u where u.email = :email")
+    User findUserByEmail(@Param("email") String email);
 }

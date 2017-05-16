@@ -1,6 +1,8 @@
-package com.savchuk.dao.entitties;
+package com.savchuk.dao.entitties.Test;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.savchuk.dao.entitties.GenericEntity;
+import com.savchuk.dao.entitties.User;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import javax.persistence.*;

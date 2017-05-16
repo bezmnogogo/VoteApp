@@ -1,7 +1,7 @@
 package com.savchuk.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.savchuk.dao.entitties.Question;
+import com.savchuk.dao.entitties.Question.Question;
 
 /**
  * Created by home on 16.05.17.

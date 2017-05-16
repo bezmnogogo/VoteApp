@@ -1,6 +1,6 @@
 package com.savchuk.services.Questions;
 
-import com.savchuk.dao.entitties.QuestionType;
+import com.savchuk.dao.entitties.Question.QuestionType;
 
 import java.util.List;
 
