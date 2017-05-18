@@ -22,4 +22,9 @@ public class TestAccessUserJoinService implements ITestAccessUserJoinService{
     public TestAccessUserJoin addUserAccess(TestAccessUserJoin testAccessUserJoin) {
         return testAccessUserJoinRepository.saveAndFlush(testAccessUserJoin);
     }
+
+    @Override
+    public TestAccessUserJoin getTestAccessUserJoin(long userId, long testId) {
+        return testAccessUserJoinRepository.getTestAccessUserJoin(userId, testId);
+    }
 }

@@ -10,4 +10,6 @@ public interface ITestAccessUserJoinService {
 
     TestAccessUserJoin addUserAccess(TestAccessUserJoin testAccessUserJoin);
 
+    TestAccessUserJoin getTestAccessUserJoin(long userId, long testId);
+
 }

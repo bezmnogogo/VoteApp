@@ -21,4 +21,9 @@ public class TestAccessCreatedUserJoinService implements ITestAccessCreatedUserJ
     public TestAccessCreatedUserJoin saveUserAccess(TestAccessCreatedUserJoin testAccessCreatedUserJoin) {
         return testAccessCreatedUserJoinRepository.saveAndFlush(testAccessCreatedUserJoin);
     }
+
+    @Override
+    public TestAccessCreatedUserJoin getTestAccessCreatedUserJoin(long userId, long testId) {
+        return testAccessCreatedUserJoinRepository.getTestAccessCreatedUserJoin(userId, testId);
+    }
 }

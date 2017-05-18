@@ -29,7 +29,7 @@ public class QuestionService implements IQuestionService{
 
     @Override
     public Question findQuestionById(long questionId) {
-        return null;
+        return questionRepository.findOne(questionId);
     }
 
     @Override

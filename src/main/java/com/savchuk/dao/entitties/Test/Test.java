@@ -23,6 +23,10 @@ public class Test extends GenericEntity {
     User user;
 
     @JsonProperty
+    @Column(name = "isActive", nullable = false)
+    boolean isActive;
+
+    @JsonProperty
     @Column(name = "title", nullable = false)
     private String title;
 
@@ -41,6 +45,14 @@ public class Test extends GenericEntity {
     @JsonProperty
     @Column(name = "createTime", nullable = false)
     private Date createTime;
+
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setActive(boolean active) {
+        isActive = active;
+    }
 
     public User getUser() {
         return user;

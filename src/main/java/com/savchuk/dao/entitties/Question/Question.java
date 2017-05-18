@@ -6,6 +6,7 @@ import com.savchuk.dao.entitties.User;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -36,6 +37,7 @@ public class Question extends GenericEntity {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "question")
     @JsonManagedReference
     private List<QuestionOption> options;
+
 
 //    @OneToMany(fetch = FetchType.LAZY, mappedBy = "question")
 //    List<TestQuestionJoin> questionJoins;
@@ -84,5 +86,15 @@ public class Question extends GenericEntity {
 
     public void setOptions(List<QuestionOption> options) {
         this.options = options;
+    }
+
+    @JsonIgnore
+    public List<QuestionOption> getCorrectOptions(){
+        List<QuestionOption> correctOtions = new ArrayList<>();
+        for(QuestionOption option : this.options){
+            if(option.isCorrect())
+                correctOtions.add(option);
+        }
+        return correctOtions;
     }
 }

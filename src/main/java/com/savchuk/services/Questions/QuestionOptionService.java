@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 /**
  * Created by home on 14.05.17.
  */
@@ -23,5 +25,15 @@ public class QuestionOptionService implements IQuestionOptionService{
     @Override
     public QuestionOption saveQuestionOption(QuestionOption option) {
         return questionOptionRepository.saveAndFlush(option);
+    }
+
+    @Override
+    public List<QuestionOption> findAllByIds(List<Long> optionsIds) {
+        return questionOptionRepository.findAll(optionsIds);
+    }
+
+    @Override
+    public QuestionOption findById(long id) {
+        return questionOptionRepository.findOne(id);
     }
 }

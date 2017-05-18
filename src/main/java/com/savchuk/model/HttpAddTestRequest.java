@@ -16,6 +16,17 @@ public class HttpAddTestRequest {
     @JsonProperty
     Question[] testQuestions;
 
+    @JsonProperty
+    QuestionWeight[] questionWeights;
+
+    public QuestionWeight[] getQuestionWeights() {
+        return questionWeights;
+    }
+
+    public void setQuestionWeights(QuestionWeight[] questionWeights) {
+        this.questionWeights = questionWeights;
+    }
+
     public TestOptions getTestOptions() {
         return testOptions;
     }

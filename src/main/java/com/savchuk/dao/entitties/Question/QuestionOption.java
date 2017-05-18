@@ -31,12 +31,20 @@ public class QuestionOption extends GenericEntity {
     @Column(name = "isCorrect", nullable = false)
     private boolean isCorrect;
 
-    public boolean isSiCorrect() {
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
+
+    public boolean isCorrect() {
         return isCorrect;
     }
 
-    public void setSiCorrect(boolean siCorrect) {
-        this.isCorrect = siCorrect;
+    public void setCorrect(boolean correct) {
+        isCorrect = correct;
     }
 
     public String getOption() {

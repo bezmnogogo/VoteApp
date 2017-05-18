@@ -22,6 +22,22 @@ public class TestQuestionJoin extends GenericEntity {
     @JoinColumn(name = "test_id", nullable = false)
     private Test test;
 
+    @Column(name = "question_weight")
+    private int questionWeight;
+
+    public TestQuestionJoin() {
+        super();
+        this.questionWeight = 1;
+    }
+
+    public int getQuestionWeight() {
+        return questionWeight;
+    }
+
+    public void setQuestionWeight(int questionWeight) {
+        this.questionWeight = questionWeight;
+    }
+
     public Question getQuestion() {
         return question;
     }
